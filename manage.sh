@@ -15,6 +15,7 @@ CONF_API=/opt/gunicorn_api.conf.py
 
 # init sudo
 sudo echo "" > /dev/null
+! [ $? -eq 0 ] && echo "Error! Wrong password!" && exit 10
 
 cmd=$1; ! [ -z "$cmd" ] && shift
 param1=$1; ! [ -z "$param1" ] && shift
@@ -27,6 +28,8 @@ case $cmd in
             echo "gunicorn seems to be already running"
             exit 133
         fi
+        sudo -u $USER sh -c "cd $WORK_DIR_MAIN/ && $PYTHON_MAIN $WORK_DIR_MAIN/src/manage.py collectstatic --noinput"
+        sudo -u $USER sh -c "cd $WORK_DIR_API/ && $PYTHON_API $WORK_DIR_API/src/manage.py collectstatic --noinput"
         DAEMONFLAG="-D"
         STARTMSG="daemon"
         [ "$param1" = "--debug" ] && DAEMONFLAG="" && STARTMSG="interactive"
@@ -38,7 +41,7 @@ case $cmd in
         else
             echo "Started $STARTMSG"
         fi
-        sudo -u $USER sh -c "cd $WORK_DIR_API/src; $PYTHON_API manage.py celery worker -D --concurrency=2 --logfile=/var/log/creativesuburbs/celery.log --pidfile=/tmp/celery.pid"
+        sudo -u $USER sh -c "cd $WORK_DIR_API/src; $PYTHON_API $WORK_DIR_API/src/manage.py celery worker -D --concurrency=2 --logfile=/var/log/creativesuburbs/celery.log --pidfile=/tmp/celery.pid"
         sudo service nginx restart
         ;;
     stop)
