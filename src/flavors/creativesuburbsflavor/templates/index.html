@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block site-title %}
-<a href="/">{{ config.app.name }}</a>
+<a href="/"><img src="{{ config.static_url }}css/images/creativesuburbs_128.png"></a>
 {% endblock %}
 
 {% block meta %}
@@ -48,7 +48,7 @@
   This will place content in the colophon below the map
  -->
 {% block colophon %}
-<p id="powered-by">{% blocktrans %}Powered by{% endblocktrans %} <a href="http://shareabouts.org/" class="shareabouts-logo" target="_blank">Shareabouts</a>, <span class="nobreak">a project of <a href="http://openplans.org/" class="openplans-logo" target="_blank">OpenPlans</a></span></p>
+<p id="powered-by">{% blocktrans %}A project by{% endblocktrans %} <img src="{{ config.static_url }}css/images/creativesuburbs_small1.png">,{% blocktrans %}powered by{% endblocktrans %} <a href="http://shareabouts.org/" class="shareabouts-logo" target="_blank">Shareabouts</a></p>
 {% endblock %}
 
 <!--
