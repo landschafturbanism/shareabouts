@@ -51,106 +51,59 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    label: _(Landmark)
+  walking:
+    label: _(Walking network)
     rules:
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
+      - condition: '"{{location_type}}" === "walking"'
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/css/images/pins/pin_walking_36x53.png
+          iconSize: [36, 53]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "landmark" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  park:
-    label: _(Park)
+  bike:
+    label: _(Bike network)
     rules:
-      - condition: '"{{location_type}}" === "park" && {{layer.focused}}'
-        # Show parks that are points as icons...
-
+      - condition: '"{{location_type}}" === "bike"'
         icon:
-          iconUrl: /static/css/images/markers/marker-4bbd45.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-        # ...and parks that are polygons as shapes.
-
-        style:
-          color: '#4bbd45'
-          weight: 3
-          opacity: 0.9
-          fillOpacity: 0.7
-
-      - condition: '"{{location_type}}" === "park"'
-        # Show parks that are points as icons...
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-4bbd45.png
-          iconSize: [17, 18]
+          iconUrl: /static/css/images/pins/pin_bike_36x53.png
+          iconSize: [36, 53]
           iconAnchor: [9, 9]
 
-        # ...and parks that are polygons as shapes.
-
-        style:
-          color: '#4bbd45'
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
-
-  school:
-    label: _(School)
+  traffic:
+    label: _(Traffic)
     rules:
-      - condition: '"{{location_type}}" === "school" && {{submission_sets.comments.length}} > 0'
-        # Display schools as circles
+      - condition: '"{{location_type}}" === "traffic"'
+        icon:
+          iconUrl: /static/css/images/pins/pin_traffic_36x53.png
+          iconSize: [36, 53]
+          iconAnchor: [9, 9]
 
-        style:
-          color: '#f95016'
-          radius: 8
-          weight: 4
-          opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
-          weight: 4
-          opacity: 0.9
-          fillOpacity: 0.4
+  parking:
+    label: _(Car parking)
+    rules:
+      - condition: '"{{location_type}}" === "parking"'
+        icon:
+          iconUrl: /static/css/images/pins/pin_parking_36x53.png
+          iconSize: [36, 53]
+          iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "school"'
-        style:
-          color: '#f95016'
-          radius: 8
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
+  pubtransport:
+    label: _(Public transport)
+    rules:
+      - condition: '"{{location_type}}" === "pubtransport"'
+        icon:
+          iconUrl: /static/css/images/pins/pin_pubtransport_36x53.png
+          iconSize: [36, 53]
+          iconAnchor: [9, 9]
+
+  other:
+    label: _(Other)
+    rules:
+      - condition: '"{{location_type}}" === "other"'
+        icon:
+          iconUrl: /static/css/images/pins/pin_other_36x53.png
+          iconSize: [36, 53]
+          iconAnchor: [9, 9]
 
 
 activity:
@@ -208,12 +161,18 @@ place:
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Landmark)
-          value: landmark
-        - label: _(Park)
-          value: park
-        - label: _(School)
-          value: school
+        - label: _(Walking network)
+          value: walking
+        - label: _(Bike network)
+          value: bike
+        - label: _(Traffic)
+          value: traffic
+        - label: _(Car parking)
+          value: parking
+        - label: _(Public transport)
+          value: pubtransport
+        - label: _(Other)
+          value: other
       name: location_type
       attrs:
         - key: required
@@ -275,41 +234,29 @@ pages:
     name: overview
     start_page: true
 
-  - title: _(More...)
-    pages:
-      - title: _(Why Shareabouts?)
-        slug: why
-        url: /static/pages/why.html
-
-      - title: _(Features)
-        slug: features
-        url: /static/pages/features.html
-
-  - title: _(Links)
-    pages:
-      - title: _(Documentation)
-        external: true
-        url: https://github.com/openplans/shareabouts/tree/master/doc
-      - title: _(Issues)
-        external: true
-        url: https://github.com/openplans/shareabouts/issues
-      - title: _(GitHub)
-        external: true
-        url: https://github.com/openplans/shareabouts
   - title: Filter Places
     slug: filter-type
     pages:
       - title: All
         external: true
         url: /filter/all
-      - title: _(Landmark)
-        url: /filter/landmark
+      - title: _(Walking network)
+        url: /filter/walking
         external: true
-      - title: _(Park)
-        url: /filter/park
+      - title: _(Bike network)
+        url: /filter/bike
         external: true
-      - title: _(School)
-        url: /filter/school
+      - title: _(Traffic)
+        url: /filter/traffic
+        external: true
+      - title: _(Car parking)
+        url: /filter/parking
+        external: true
+      - title: _(Public transport)
+        url: /filter/pubtransport
+        external: true
+      - title: _(Other)
+        url: /filter/other
         external: true
 
 notifications:
