@@ -11,7 +11,21 @@ body, select, input, textarea {
 }
 
 .mainpagelogo{
-  height: 64px;
+  /*max-height: 64px;*/
+  height: 1.5em;
+}
+
+.img-frame {
+    height: 25px;      /* equals max image height */
+    width: 160px;
+    white-space: nowrap;
+    text-align: center; margin: 1em 0;
+}
+
+img.cs_logo_footer {
+    vertical-align: middle;
+    max-height: 25px;
+    max-width: 160px;
 }
 
 /* Links */
