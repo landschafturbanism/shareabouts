@@ -92,7 +92,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "pubtransport"'
         icon:
-          iconUrl: /static/css/images/pins/pin_pubtransport.png
+          iconUrl: /static/css/images/pins/pin_pt.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
