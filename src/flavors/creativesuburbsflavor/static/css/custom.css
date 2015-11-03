@@ -231,22 +231,28 @@ form .signed-in-as {
   background-color: #dbef16 !important;
 }
 .access li ul li:nth-child(2) a {
-  background-image: url(/static/css/images/markers/dot-yellow.png) !important;/* Beautification/Art */
+  background-image: url(/static/css/images/pins/pin_walking.png) !important;/* Walking Network */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(3) a {
-  background-image: url(/static/css/images/markers/dot-green.png) !important;/* Child/Senior Citizen Focused */
+  background-image: url(/static/css/images/pins/pin_bike.png) !important;/* Bike Network */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(4) a {
-  background-image: url(/static/css/images/markers/dot-purple.png) !important;/* Garden/Farmers' Market/Healthy Eating */
+  background-image: url(/static/css/images/pins/pin_traffic.png) !important;/* Traffic */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(5) a {
-  background-image: url(/static/css/images/markers/dot-pink.png) !important;/* Physical Activity/Exercise */
+  background-image: url(/static/css/images/pins/pin_parking.png) !important;/* Car Parking */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(6) a {
-  background-image: url(/static/css/images/markers/dot-blue.png) !important;/* Public Comfort (shade, seating, etc.)) */
+  background-image: url(/static/css/images/pins/pin_pt.png) !important;/* Public Transport */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(7) a {
-  background-image: url(/static/css/images/markers/dot-teal.png) !important;/* Gathering Space */
+  background-image: url(/static/css/images/pins/pin_other.png) !important;/* Other */
+  background-size: 12px 16px !important;
 }
 .access li ul li:nth-child(8) a {
   background-image: url(/static/css/images/markers/dot-orange.png) !important;/* Safety */
