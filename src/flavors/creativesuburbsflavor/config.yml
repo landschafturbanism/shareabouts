@@ -56,7 +56,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "walking"'
         icon:
-          iconUrl: /static/css/images/pins/pin_walking_36x53.png
+          iconUrl: /static/css/images/pins/pin_walking.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -65,7 +65,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bike"'
         icon:
-          iconUrl: /static/css/images/pins/pin_bike_36x53.png
+          iconUrl: /static/css/images/pins/pin_bike.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -74,7 +74,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "traffic"'
         icon:
-          iconUrl: /static/css/images/pins/pin_traffic_36x53.png
+          iconUrl: /static/css/images/pins/pin_traffic.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -83,7 +83,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "parking"'
         icon:
-          iconUrl: /static/css/images/pins/pin_parking_36x53.png
+          iconUrl: /static/css/images/pins/pin_parking.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -92,7 +92,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "pubtransport"'
         icon:
-          iconUrl: /static/css/images/pins/pin_pubtransport_36x53.png
+          iconUrl: /static/css/images/pins/pin_pubtransport.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -101,7 +101,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "other"'
         icon:
-          iconUrl: /static/css/images/pins/pin_other_36x53.png
+          iconUrl: /static/css/images/pins/pin_other.png
           iconSize: [36, 53]
           iconAnchor: [9, 9]
 
@@ -233,6 +233,18 @@ pages:
     slug: about
     name: overview
     start_page: true
+
+  - title: _(Links)
+    pages:
+      - title: _(Documentation)
+        external: true
+        url: https://github.com/openplans/shareabouts/tree/master/doc
+      - title: _(Issues)
+        external: true
+        url: https://github.com/openplans/shareabouts/issues
+      - title: _(GitHub)
+        external: true
+        url: https://github.com/openplans/shareabouts
 
   - title: Filter Places
     slug: filter-type
