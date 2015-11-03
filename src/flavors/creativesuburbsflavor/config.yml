@@ -238,13 +238,13 @@ pages:
     pages:
       - title: _(Documentation)
         external: true
-        url: https://github.com/openplans/shareabouts/tree/master/doc
+        url: https://github.com/landschafturbanism/shareabouts/tree/master/doc
       - title: _(Issues)
         external: true
-        url: https://github.com/openplans/shareabouts/issues
+        url: https://github.com/landschafturbanism/shareabouts/issues
       - title: _(GitHub)
         external: true
-        url: https://github.com/openplans/shareabouts
+        url: https://github.com/landschafturbanism/shareabouts
 
   - title: Filter Places
     slug: filter-type
