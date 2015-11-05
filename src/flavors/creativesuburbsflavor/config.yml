@@ -58,7 +58,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_walking.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
   bike:
     label: _(Bike network)
@@ -67,7 +67,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_bike.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
   traffic:
     label: _(Traffic)
@@ -76,7 +76,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_traffic.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
   parking:
     label: _(Car parking)
@@ -85,7 +85,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_parking.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
   pubtransport:
     label: _(Public transport)
@@ -94,7 +94,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_pt.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
   other:
     label: _(Other)
@@ -103,7 +103,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/pins/pin_other.png
           iconSize: [36, 53]
-          iconAnchor: [9, 9]
+          iconAnchor: [18, 53]
 
 
 activity:
