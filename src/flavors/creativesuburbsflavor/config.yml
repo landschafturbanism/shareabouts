@@ -234,17 +234,9 @@ pages:
     name: overview
     start_page: true
 
-  - title: _(Links)
-    pages:
-      - title: _(Documentation)
-        external: true
-        url: https://github.com/landschafturbanism/shareabouts/tree/master/doc
-      - title: _(Issues)
-        external: true
-        url: https://github.com/landschafturbanism/shareabouts/issues
-      - title: _(GitHub)
-        external: true
-        url: https://github.com/landschafturbanism/shareabouts
+  - title: _(Your Say Wagga)
+    external: true
+    url: http://yoursaywagga.com.au/our-transport
 
   - title: Filter Places
     slug: filter-type
