@@ -183,6 +183,8 @@ place:
       attrs:
         - key: placeholder
           value: _(Description...)
+        - key: rows
+          value: 2
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
