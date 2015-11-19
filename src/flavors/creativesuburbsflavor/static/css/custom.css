@@ -812,3 +812,7 @@ a.reply-link.btn.btn-small {
   display: none;
 }
 */
+
+textarea.place-description {
+    height: 5em !important;
+}
