@@ -813,6 +813,6 @@ a.reply-link.btn.btn-small {
 }
 */
 
-textarea.place-description {
+textarea#place-description {
     height: 5em !important;
 }
