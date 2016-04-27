@@ -56,6 +56,7 @@ var Shareabouts = Shareabouts || {};
       this.activities = new S.ActionCollection(options.activity);
       this.appView = new S.AppView({
         el: 'body',
+        mapEl: options.mapEl || '#map',
         collection: this.collection,
         activities: this.activities,
 
@@ -163,7 +164,9 @@ var Shareabouts = Shareabouts || {};
 
       if (locationType !== 'all') {
         this.appView.mapView.filter(locationType);
-        this.appView.listView.filter({'location_type': locationType});
+        if (this.appView.listView) {
+          this.appView.listView.filter({'location_type': locationType});
+        }
 
         // Show the menu item title with the coresponding style
         if (menuItem) {
@@ -176,7 +179,9 @@ var Shareabouts = Shareabouts || {};
       } else {
         // If the filter is 'all', we're unsetting the filter.
         this.appView.mapView.clearFilter();
-        this.appView.listView.clearFilters();
+        if (this.appView.listView) {
+          this.appView.listView.clearFilters();
+        }
 
         $filterIndicator
           .removeClass()
@@ -188,7 +193,7 @@ var Shareabouts = Shareabouts || {};
     filterMap: function(locationType) {
       this.setLocationTypeFilter(locationType);
       if (locationType === 'all') {
-        if (this.appView.listView.isVisible()) {
+        if (this.appView.listView && this.appView.listView.isVisible()) {
           this.navigate('/list', {trigger: false});
         } else {
           this.navigate('/', {trigger: false});
