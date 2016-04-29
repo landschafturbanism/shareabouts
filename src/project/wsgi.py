@@ -27,8 +27,8 @@ application = get_wsgi_application()
 from dj_static import Cling
 application = Cling(application)
 
-from .gzip_middleware import GzipMiddleware
-application = GzipMiddleware(application)
+# from .gzip_middleware import GzipMiddleware
+# application = GzipMiddleware(application)
 
 from .twinkie import ExpiresMiddleware
 application = ExpiresMiddleware(application, {
@@ -37,7 +37,7 @@ application = ExpiresMiddleware(application, {
     'image/png':              365*24*60*60,
 })
 
-from .basic_auth import BasicAuthMiddleware
-application = BasicAuthMiddleware(application, exempt=(
-    r'^/api/',
-))
+# from .basic_auth import BasicAuthMiddleware
+# application = BasicAuthMiddleware(application, exempt=(
+#     r'^/api/',
+# ))

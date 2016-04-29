@@ -10,6 +10,7 @@ def BasicAuthMiddleware(application, exempt=()):
     username = os.environ.get('BASIC_AUTH_USERNAME')
     password = os.environ.get('BASIC_AUTH_PASSWORD')
     is_protected = (username and password)
+    is_protected = False
 
     def not_authorized(environ, start_response, msg=None):
         start_response('401 NOT AUTHORIZED', [('WWW-Authenticate', 'Basic')])

@@ -238,7 +238,6 @@ pages:
   - title: _(About)
     slug: about
     name: overview
-    url: /map/page/about
     start_page: true
 
   - title: _(Greening the Pipeline)
@@ -250,24 +249,24 @@ pages:
     pages:
       - title: All
         external: true
-        url: /map/filter/all
+        url: /filter/all
       - title: _(Walking network)
-        url: /map/filter/walking
+        url: /filter/walking
         external: true
       - title: _(Bike network)
-        url: /map/filter/bike
+        url: /filter/bike
         external: true
       - title: _(Traffic)
-        url: /map/filter/traffic
+        url: /filter/traffic
         external: true
       - title: _(Car parking)
-        url: /map/filter/parking
+        url: /filter/parking
         external: true
       - title: _(Public transport)
-        url: /map/filter/pubtransport
+        url: /filter/pubtransport
         external: true
       - title: _(Other)
-        url: /map/filter/other
+        url: /filter/other
         external: true
 
 notifications:
