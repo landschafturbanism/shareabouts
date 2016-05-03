@@ -120,7 +120,7 @@ place:
   adding_supported: true
   add_button_label: _(Add a Place)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Places)
+  show_list_button_label: _(List All Ideas)
   show_map_button_label: _(Show the Map)
   action_text: _(added)
   title: _(Tell us more...)
@@ -242,9 +242,9 @@ pages:
 
   - title: _(Greening the Pipeline)
     external: true
-    url: http://www.wyndham.vic.gov.au/aboutwyndham/consultation/greeningthepipeline
+    url: http://www.greeningthepipeline.com.au
 
-  - title: Filter Places
+  - title: Filter Ideas
     slug: filter-type
     pages:
       - title: All
