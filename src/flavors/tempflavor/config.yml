@@ -55,53 +55,44 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  walking:
-    label: _(Walking network)
+  vegetation:
+    label: _(Vegetation)
     rules:
-      - condition: '"{{location_type}}" === "walking"'
+      - condition: '"{{location_type}}" === "vegetation"'
         icon:
-          iconUrl: /static/css/images/pins/pin_walking.png
+          iconUrl: /static/css/images/pins/pin_vegetation.png
           iconSize: [36, 53]
           iconAnchor: [18, 53]
 
-  bike:
-    label: _(Bike network)
+  amenities:
+    label: _(Amenities)
     rules:
-      - condition: '"{{location_type}}" === "bike"'
+      - condition: '"{{location_type}}" === "amenities"'
         icon:
-          iconUrl: /static/css/images/pins/pin_bike.png
+          iconUrl: /static/css/images/pins/pin_amenities.png
           iconSize: [36, 53]
           iconAnchor: [18, 53]
 
-  traffic:
-    label: _(Traffic)
+  recreational:
+    label: _(Recreational facilities)
     rules:
-      - condition: '"{{location_type}}" === "traffic"'
+      - condition: '"{{location_type}}" === "recreational"'
         icon:
-          iconUrl: /static/css/images/pins/pin_traffic.png
+          iconUrl: /static/css/images/pins/pin_recreational.png
           iconSize: [36, 53]
           iconAnchor: [18, 53]
 
-  parking:
-    label: _(Car parking)
+  gettingaround:
+    label: _(Getting around)
     rules:
-      - condition: '"{{location_type}}" === "parking"'
+      - condition: '"{{location_type}}" === "gettingaround"'
         icon:
-          iconUrl: /static/css/images/pins/pin_parking.png
-          iconSize: [36, 53]
-          iconAnchor: [18, 53]
-
-  pubtransport:
-    label: _(Public transport)
-    rules:
-      - condition: '"{{location_type}}" === "pubtransport"'
-        icon:
-          iconUrl: /static/css/images/pins/pin_pt.png
+          iconUrl: /static/css/images/pins/pin_gettingaround.png
           iconSize: [36, 53]
           iconAnchor: [18, 53]
 
   other:
-    label: _(Other)
+    label: _(Other ideas)
     rules:
       - condition: '"{{location_type}}" === "other"'
         icon:
@@ -165,17 +156,15 @@ place:
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Walking network)
-          value: walking
-        - label: _(Bike network)
-          value: bike
-        - label: _(Traffic)
-          value: traffic
-        - label: _(Car parking)
-          value: parking
-        - label: _(Public transport)
-          value: pubtransport
-        - label: _(Other)
+        - label: _(Vegetation)
+          value: vegetation
+        - label: _(Amenities)
+          value: amenities
+        - label: _(Recreational facilities)
+          value: recreational
+        - label: _(Getting around)
+          value: gettingaround
+        - label: _(Other ideas)
           value: other
       name: location_type
       attrs:
@@ -250,22 +239,19 @@ pages:
       - title: All
         external: true
         url: /filter/all
-      - title: _(Walking network)
-        url: /filter/walking
+      - title: _(Vegetation)
+        url: /filter/vegetation
         external: true
-      - title: _(Bike network)
-        url: /filter/bike
+      - title: _(Amenities)
+        url: /filter/amenities
         external: true
-      - title: _(Traffic)
-        url: /filter/traffic
+      - title: _(Recreational facilities)
+        url: /filter/recreational
         external: true
-      - title: _(Car parking)
-        url: /filter/parking
+      - title: _(Getting around)
+        url: /filter/gettingaround
         external: true
-      - title: _(Public transport)
-        url: /filter/pubtransport
-        external: true
-      - title: _(Other)
+      - title: _(Other ideas)
         url: /filter/other
         external: true
 
