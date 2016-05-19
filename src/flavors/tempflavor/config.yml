@@ -243,6 +243,10 @@ pages:
     name: overview
     start_page: true
 
+  - title: _(FAQs)
+    slug: faq
+    name: faq
+
   - title: _(Greening the Pipeline)
     external: true
     url: http://www.greeningthepipeline.com.au
