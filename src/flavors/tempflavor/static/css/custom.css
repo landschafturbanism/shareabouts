@@ -289,7 +289,7 @@ a.close-btn:hover {
   color: #fff;
 }
 .place-status-container .place-status {
-  display: none;
+  /* display: none; */
 }
 .place-status-container.bikeparking.new .place-status.requested,
 .place-status-container.abandonedbike.new .place-status.reported {
