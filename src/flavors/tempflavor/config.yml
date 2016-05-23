@@ -29,12 +29,12 @@ map:
 
   options:
     center:
-      lat: -37.86429976467348
-      lng: 144.75036931090506
-    zoom: 12
-    minZoom: 12
+      lat: -37.859045
+      lng: 144.738580
+    zoom: 14
+    minZoom: 14
     maxZoom: 20
-    maxBounds: [[-37.980267, 144.571255], [-37.774908, 144.991692]]
+    maxBounds: [[-37.868684, 144.721343], [-37.853401, 144.747753]]
   layers:
     # - url: http://{s}.tiles.mapbox.com/v3/openplans.h7ab4o5f/{z}/{x}/{y}.png
     # - url: https://api.mapbox.com/v4/creativesuburbs.nopd3hff/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
