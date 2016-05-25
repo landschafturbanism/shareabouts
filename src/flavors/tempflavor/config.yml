@@ -34,7 +34,7 @@ map:
     zoom: 15
     minZoom: 15
     maxZoom: 20
-    maxBounds: [[-37.868684, 144.721343], [-37.853401, 144.747753]]
+    maxBounds: [[-37.880707, 144.703206], [-37.831877, 144.792165]]
   layers:
     # - url: http://{s}.tiles.mapbox.com/v3/openplans.h7ab4o5f/{z}/{x}/{y}.png
     # - url: https://api.mapbox.com/v4/creativesuburbs.nopd3hff/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
@@ -43,13 +43,13 @@ map:
     # https://api.mapbox.com/styles/v1/creativesuburbs/cio2qdxaf000047nkd0n8ef19/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
     - url: https://api.mapbox.com/styles/v1/creativesuburbs/cio2qdxaf000047nkd0n8ef19/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
       minZoom: 5
-      maxZoom: 13
+      maxZoom: 17
     - url: https://api.mapbox.com/styles/v1/creativesuburbs/cio4507ml006xbvm8maitofdq/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
-      minZoom: 13
-      maxZoom: 15
+      minZoom: 117
+      maxZoom: 118
       # bounds: [[-37.875440, 144.713211], [-37.850918, 144.752568]]
     - url: https://api.mapbox.com/styles/v1/creativesuburbs/cio4aefm6002qydnkfw2wtmby/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY3JlYXRpdmVzdWJ1cmJzIiwiYSI6ImNpZzBnY3VtODA1d2N1d2x2MmQwYjY0ZnIifQ.Y_4BPGe8c65zVdv8nHNZuw
-      minZoom: 16
+      minZoom: 18
       maxZoom: 20
       # bounds: [[-37.860815, 144.735140], [-37.857230, 144.741867]]
     # - type: mapbox
@@ -251,7 +251,7 @@ pages:
 
   - title: _(Greening the Pipeline)
     external: true
-    url: http://www.greeningthepipeline.com.au
+    url: http://www.greeningthepipeline.com.au/projects
 
   - title: Filter Ideas
     slug: filter-type
